@@ -43,14 +43,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/bottom_1"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="-33dp" />
-
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/profile_image1"
         android:layout_width="96dp"
@@ -58,8 +50,12 @@
         android:src="@drawable/img_profil"
         app:civ_border_color="#0d98ba"
         app:civ_border_width="4dp"
-        tools:layout_editor_absoluteX="157dp"
-        tools:layout_editor_absoluteY="36dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/layout_statistik"
+        app:layout_constraintEnd_toEndOf="@+id/layout_statistik"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/layout_statistik"
+        app:layout_constraintTop_toTopOf="@+id/bottom_view"
+        app:layout_constraintVertical_bias="0.643" />
 
     <include
         android:id="@+id/kotak1_layout"
@@ -90,19 +86,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="@+id/kotak1_layout"
+        app:layout_constraintEnd_toStartOf="@+id/textView3"
+        app:layout_constraintStart_toStartOf="@+id/kotak1_layout"
         app:layout_constraintTop_toTopOf="@+id/kotak1_layout"
-        app:srcCompat="@android:drawable/ic_dialog_email"
-        tools:layout_editor_absoluteX="69dp" />
+        app:srcCompat="@android:drawable/ic_dialog_email" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#FFFFFF"
         android:text="PROFILE"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="334dp" />
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/kotak1_layout"
+        app:layout_constraintTop_toBottomOf="@+id/layout_statistik"
+        tools:layout_editor_absoluteX="16dp" />
 
     <TextView
         android:id="@+id/textView3"
@@ -120,29 +118,36 @@
         android:id="@+id/imageView4"
         android:layout_width="31dp"
         android:layout_height="32dp"
-        app:srcCompat="@android:drawable/ic_menu_call"
-        tools:layout_editor_absoluteX="71dp"
-        tools:layout_editor_absoluteY="473dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/textView4"
+        app:layout_constraintEnd_toStartOf="@+id/textView4"
+        app:layout_constraintHorizontal_bias="0.337"
+        app:layout_constraintStart_toStartOf="@+id/kotak2_layout"
+        app:layout_constraintTop_toTopOf="@+id/textView4"
+        app:srcCompat="@android:drawable/ic_menu_call" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#FFFFFF"
         android:text="088271118931"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="@+id/kotak2_layout"
-        app:layout_constraintTop_toTopOf="@+id/kotak2_layout"
-        tools:layout_editor_absoluteX="123dp" />
+        app:layout_constraintEnd_toEndOf="@+id/kotak2_layout"
+        app:layout_constraintStart_toStartOf="@+id/kotak2_layout"
+        app:layout_constraintTop_toTopOf="@+id/kotak2_layout" />
 
     <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#FFFFFF"
-        android:layout_marginTop="12dp"
         android:text="PRASTYO YOGA TAMA"
-        app:layout_constraintTop_toBottomOf="@+id/profile_image1"
-        tools:layout_editor_absoluteX="134dp" />
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/profile_image1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/bg"
+        app:layout_constraintTop_toTopOf="@+id/bottom_view"
+        app:layout_constraintVertical_bias="0.553" />
 
     <TextView
         android:id="@+id/textView6"
@@ -150,6 +155,9 @@
         android:layout_height="wrap_content"
         android:text="Newbie Designer"
         android:textColor="#FFFFFF"
-        tools:layout_editor_absoluteX="152dp"
-        tools:layout_editor_absoluteY="170dp" />
+        app:layout_constraintBottom_toTopOf="@+id/profile_image1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/bg"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
+</androidx.constraintlayout.widget.ConstraintLayout>
